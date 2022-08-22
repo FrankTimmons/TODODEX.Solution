@@ -1,0 +1,17 @@
+@using ToDoClient.Solution.Models
+
+@foreach (ToDo todo in Model)
+{
+  <table class="table">
+    <tr>
+      <th>@todo.Name &emsp; @todo.PP</th>
+    </tr>
+    <tr>
+      <td>@todo.Category</td>
+    </tr>
+    <tr>
+      <td>@todo.Description</td>
+    </tr>
+  </table>
+  <br>
+}
