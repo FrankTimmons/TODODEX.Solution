@@ -6,12 +6,17 @@
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Username)
-  @Html.TextBoxFor(model => model.Username)
+  <table class="table">
+    <tr>  
+      <th>@Html.LabelFor(model => model.Username)</th>
+      <td>@Html.TextBoxFor(model => model.Username)</td>
+    </tr>
 
-  @Html.LabelFor(model => model.Password)
-  @Html.PasswordFor(model => model.Password)
-
+    <tr>
+      <th>@Html.LabelFor(model => model.Password)</th>
+      <th>@Html.PasswordFor(model => model.Password)</th>
+    </tr>
+  </table>
   <button type="submit" class="btn btn-primary">Log In</button>
 }
 <br>
