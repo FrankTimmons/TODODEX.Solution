@@ -33,12 +33,12 @@ namespace ToDoClient.Solution
         {
             services.AddMvc();
 
-            services.AddEntityFrameworkMySql()
-                    .AddDbContext<ToDoClientContext>(options => options
+            services.AddDbContext<ToDoClientContext>(options => options
                     .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                     .AddEntityFrameworkStores<ToDoClientContext>()
+                    .AddDefaultUI()
                     .AddDefaultTokenProviders();
 
             services.AddControllersWithViews();

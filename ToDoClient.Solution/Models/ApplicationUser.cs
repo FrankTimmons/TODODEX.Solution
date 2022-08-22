@@ -7,11 +7,6 @@ namespace ToDoClient.Solution.Models
 {
   public class ApplicationUser : IdentityUser
   {
-    public ApplicationUser()
-    {
-      this.ToDos = new HashSet<ToDo>();
-    }
-    public virtual ICollection<ToDo> ToDos { get; set; }
+    // public string ToDos { get; set; }
   }
-  
 }
