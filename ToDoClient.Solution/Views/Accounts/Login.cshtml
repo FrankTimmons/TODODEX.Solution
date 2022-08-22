@@ -1,0 +1,18 @@
+@using ToDoClient.Solution.ViewModels;
+@model LoginViewModel
+
+<h4>Log into your account</h4>
+<hr />
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Username)
+  @Html.TextBoxFor(model => model.Username)
+
+  @Html.LabelFor(model => model.Password)
+  @Html.PasswordFor(model => model.Password)
+
+  <button type="submit" class="btn btn-primary">Log In</button>
+}
+<br>
+<a href='@Url.Action("Register")'><button class="btn btn-primary">Register a New Account</button></a>

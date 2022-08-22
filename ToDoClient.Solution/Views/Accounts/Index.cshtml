@@ -1,0 +1,16 @@
+@using System.Security.Claims;
+@model ToDoClient.Solution.Models.ApplicationUser;
+
+@if (User.Identity.IsAuthenticated)
+{
+  <p>Hello @User.Identity.Name</p>
+  @using (Html.BeginForm("LogOff", "Accounts"))
+  {
+    <button type="submit" class="btn btn-primary">Log Out</button>
+  }
+}
+else
+{
+  <a href='@Url.Action("Register")'><button class="btn btn-primary">Register</button></a>
+  <a href='@Url.Action("Login")'><button class="btn btn-primary">Log In</button></a>
+}

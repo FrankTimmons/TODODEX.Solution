@@ -1,0 +1,23 @@
+@using ToDoClient.Solution.ViewModels;
+@model RegisterViewModel;
+
+<h4>Register a new account</h4>
+<hr />
+@using (Html.BeginForm())
+{
+  <table class="table">
+    <tr>
+      <th>@Html.LabelFor(user => user.Username)</th>
+      <td>@Html.TextBoxFor(user => user.Username)</td>
+    </tr>
+    <tr>
+      <th>@Html.LabelFor(user => user.Password)</th>
+      <td>@Html.PasswordFor(user => user.Password)</td>
+    </tr>
+    <tr>
+      <th>@Html.LabelFor(user => user.ConfirmPassword)</th>
+      <td>@Html.PasswordFor(user => user.ConfirmPassword)</td>
+    </tr>
+  </table>
+  <button type="submit" class="btn btn-primary">Register</button>
+}
