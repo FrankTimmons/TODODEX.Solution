@@ -209,6 +209,37 @@ namespace ToDoClient.Solution.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("ToDoClient.Solution.Models.ToDo", b =>
+                {
+                    b.Property<int>("ToDoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Category")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int>("PP")
+                        .HasColumnType("int");
+
+                    b.HasKey("ToDoId");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.ToTable("ToDo");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -258,6 +289,18 @@ namespace ToDoClient.Solution.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ToDoClient.Solution.Models.ToDo", b =>
+                {
+                    b.HasOne("ToDoClient.Solution.Models.ApplicationUser", null)
+                        .WithMany("ToDos")
+                        .HasForeignKey("ApplicationUserId");
+                });
+
+            modelBuilder.Entity("ToDoClient.Solution.Models.ApplicationUser", b =>
+                {
+                    b.Navigation("ToDos");
                 });
 #pragma warning restore 612, 618
         }

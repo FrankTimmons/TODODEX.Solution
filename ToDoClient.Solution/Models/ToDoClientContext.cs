@@ -5,11 +5,12 @@ namespace ToDoClient.Solution.Models
 {
   public class ToDoClientContext : IdentityDbContext<ApplicationUser>
   {
-    public ToDoClientContext(DbContextOptions options) : base(options) { }
+    public ToDoClientContext(DbContextOptions<ToDoClientContext> options) : base(options) { }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       optionsBuilder.UseLazyLoadingProxies();
     }
+
   }
 }
