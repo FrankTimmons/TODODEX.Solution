@@ -1,0 +1,13 @@
+@using ToDoClient.Solution.Models
+@model ToDoClient.Solution.Models.ToDo
+
+<h4>ToDo Details</h4>
+
+<img src='@Model.Image' style="width:640px" />
+
+<table class="table">
+  <tr><th>@Model.Name</th></tr>
+  <tr><td>@Model.PP</td></tr>
+  <tr><td>@Model.Category</td></tr>
+  <tr><td>@Model.Description</td></tr>
+</table>
