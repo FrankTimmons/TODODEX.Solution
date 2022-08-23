@@ -49,7 +49,7 @@
   align-items: flex-end; 
   position: relative;
   background-color: #fff;
-  height: 100vh;
+  height: 100%;
   margin-top: 0px;
   padding: 2%;
 }
@@ -145,7 +145,7 @@ table, td, th {
   background-color: #999;
 }
 
-col-1, col-2, col-3, col-4, col-5, col-6, col-7, col-8, col-9, col-10, col-11, col-12 {
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
   margin-bottom: 0px;
 }
 
@@ -155,32 +155,32 @@ nav a {
   display: inline-block;
 }
 
-ul {
+nav ul {
   display: inline;
   margin: 0;
   padding: 0;
   font-size: 28px;
 }
-ul li {
+nav ul li {
   display: inline-block;
 }
-ul li:hover { 
+nav ul li:hover { 
   background: #ddd; 
   color: #d9230f;
 }
-ul li:hover ul { display: block; }
-ul li ul {
+nav ul li:hover ul { display: block; }
+nav ul li ul {
   position: absolute;
   width: 220px;
   display: none;
 }
-ul li ul li {
+nav ul li ul li {
   background: #ddd;
   display: block;
   padding: 8px;
 }
-ul li ul li a { display: block !important; }
-ul li ul li:hover { background: #ccc; }
+nav ul li ul li a { display: block !important; }
+nav ul li ul li:hover { background: #ccc; }
 
 .link {
   color: #029ACF;
@@ -188,4 +188,9 @@ ul li ul li:hover { background: #ccc; }
 .link:hover {
   color:#029ACF;
   text-decoration: none;
+}
+
+#AddList{
+  column-count: 4;
+  column-gap: 20px;
 }

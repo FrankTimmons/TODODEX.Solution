@@ -5,11 +5,10 @@
 {
   var result = ToDo.GetToDos();
   
-  <ul>
+  <ul id="AddList">
     @foreach(ToDo toDo in result)
       {
-        <li>${"name"}</li>
+        <li>@Html.ActionLink(@toDo.Name, "Details", new { id = @toDo.ToDoId })</li>
       }
   </ul>
-  
-  }
+}
