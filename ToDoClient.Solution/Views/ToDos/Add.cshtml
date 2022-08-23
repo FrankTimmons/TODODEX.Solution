@@ -1,0 +1,15 @@
+@using ToDoClient.Solution.Models;
+@model ToDoClient.Solution.Models.ToDo;
+
+@if(User.Identity.IsAuthenticated)
+{
+  var result = ToDo.GetToDos();
+  
+  <ul>
+    @foreach(ToDo toDo in result)
+      {
+        <li>${"name"}</li>
+      }
+  </ul>
+  
+  }

@@ -190,6 +190,9 @@ namespace ToDoClient.Solution.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
+                    b.Property<string>("ToDos")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("tinyint(1)");
 

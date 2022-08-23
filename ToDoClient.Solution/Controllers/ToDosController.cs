@@ -51,5 +51,10 @@ namespace ToDoClient.Solution.Controllers
       ToDo.Delete(id);
       return RedirectToAction("Index");
     }
+
+    public IActionResult Add()
+    {
+      return View();
+    }
   }
 }

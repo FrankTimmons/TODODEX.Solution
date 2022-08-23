@@ -9,7 +9,7 @@ using ToDoClient.Solution.Models;
 namespace ToDoClient.Solution.Migrations
 {
     [DbContext(typeof(ToDoClientContext))]
-    [Migration("20220822231033_Initial")]
+    [Migration("20220823153736_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -190,6 +190,9 @@ namespace ToDoClient.Solution.Migrations
                         .HasColumnType("tinyint(1)");
 
                     b.Property<string>("SecurityStamp")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("ToDos")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<bool>("TwoFactorEnabled")

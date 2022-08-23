@@ -7,6 +7,6 @@ namespace ToDoClient.Solution.Models
 {
   public class ApplicationUser : IdentityUser
   {
-    // public string ToDos { get; set; }
+    public string ToDos { get; set; }
   }
 }

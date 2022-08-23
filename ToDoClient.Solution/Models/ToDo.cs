@@ -21,9 +21,9 @@ namespace ToDoClient.Solution.Models
       var result = apiCallTask.Result;
 
       JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
-      List<ToDo> animalList = JsonConvert.DeserializeObject<List<ToDo>>(jsonResponse.ToString());
+      List<ToDo> toDoList = JsonConvert.DeserializeObject<List<ToDo>>(jsonResponse.ToString());
 
-      return animalList;
+      return toDoList;
     }
 
     public static ToDo GetDetails(int id)

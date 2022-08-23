@@ -22,6 +22,7 @@
 .btn-header {
   background: transparent;
   color: #777;
+  font-size: 28px;
 }
 
 .btn-header:hover {
@@ -69,6 +70,10 @@
   font-family: -apple-system,helvetica neue,open sans,sans-serif!important;
   background-color: #fff;
   margin-bottom: 0px;
+  text-decoration: none;
+  padding: 0px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -137,4 +142,50 @@ table, td, th {
   border: 5px solid #029acf;
   border-radius: 15px;
   height: 218px;
+  background-color: #999;
+}
+
+col-1, col-2, col-3, col-4, col-5, col-6, col-7, col-8, col-9, col-10, col-11, col-12 {
+  margin-bottom: 0px;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+}
+
+ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+}
+ul li {
+  display: inline-block;
+}
+ul li:hover { 
+  background: #ddd; 
+  color: #d9230f;
+}
+ul li:hover ul { display: block; }
+ul li ul {
+  position: absolute;
+  width: 220px;
+  display: none;
+}
+ul li ul li {
+  background: #ddd;
+  display: block;
+  padding: 8px;
+}
+ul li ul li a { display: block !important; }
+ul li ul li:hover { background: #ccc; }
+
+.link {
+  color: #029ACF;
+}
+.link:hover {
+  color:#029ACF;
+  text-decoration: none;
 }
