@@ -48,7 +48,6 @@ namespace todoapi
         app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "todoapi v1"));
       }
 
-      app.UseHttpsRedirection();
 
       app.UseRouting();
 
