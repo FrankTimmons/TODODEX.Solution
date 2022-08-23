@@ -8,7 +8,7 @@ using todoAPI.Models;
 namespace todoapi.Migrations
 {
     [DbContext(typeof(todoAPIContext))]
-    [Migration("20220823194941_Initial")]
+    [Migration("20220823200844_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -297,7 +297,7 @@ namespace todoapi.Migrations
                             Description = "Makes you eat a ghost pepper",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011390601897455686/ghostgarper.png",
                             Name = "Ghostgarper",
-                            PP = 0
+                            PP = 25
                         },
                         new
                         {
@@ -306,7 +306,7 @@ namespace todoapi.Migrations
                             Description = "Flips your mattress for no reason",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011686784633143346/FlipMonChan.png",
                             Name = "Flipmonchan",
-                            PP = 0
+                            PP = 89
                         },
                         new
                         {
@@ -315,7 +315,7 @@ namespace todoapi.Migrations
                             Description = "Takes out your trash",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011684166254993498/trashpinch.png",
                             Name = "Trashpinch",
-                            PP = 0
+                            PP = 74
                         },
                         new
                         {
@@ -324,7 +324,7 @@ namespace todoapi.Migrations
                             Description = "Gets your mail - shreds it",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011682850715750460/mailapod.png",
                             Name = "Mailapod",
-                            PP = 0
+                            PP = 32
                         },
                         new
                         {
@@ -333,7 +333,7 @@ namespace todoapi.Migrations
                             Description = "Cleans your dishes without soap",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011395918093893722/MR_Dirty.png",
                             Name = "Mr. Dirty",
-                            PP = 0
+                            PP = 1
                         },
                         new
                         {
@@ -342,7 +342,7 @@ namespace todoapi.Migrations
                             Description = "Bakes cookies - burns them",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011687059389427732/CookieTron.png",
                             Name = "Cookietron",
-                            PP = 0
+                            PP = 56
                         },
                         new
                         {
@@ -360,7 +360,7 @@ namespace todoapi.Migrations
                             Description = "Makes your README file - never credits you",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011718304840294481/SeekZaTenShun.png",
                             Name = "Seekzatenshun",
-                            PP = 0
+                            PP = 58
                         },
                         new
                         {
@@ -369,7 +369,7 @@ namespace todoapi.Migrations
                             Description = "Updates your resume with their name and contact info",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011720274082791494/resumoocher.png",
                             Name = "Jobbofind",
-                            PP = 0
+                            PP = 23
                         },
                         new
                         {
@@ -378,7 +378,7 @@ namespace todoapi.Migrations
                             Description = "Mops your floor with too much soap",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011686475169026048/Moprog.png",
                             Name = "Moprog",
-                            PP = 0
+                            PP = 79
                         },
                         new
                         {
@@ -387,7 +387,7 @@ namespace todoapi.Migrations
                             Description = "You must speed run Darksouls",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011415353122889879/you_died.png",
                             Name = "You Died",
-                            PP = 0
+                            PP = 65
                         },
                         new
                         {
@@ -396,7 +396,7 @@ namespace todoapi.Migrations
                             Description = "Takes a bath - you no longer have a bath",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011417800079847494/scrubadubdub.png",
                             Name = "Scrubadubdub",
-                            PP = 0
+                            PP = 37
                         },
                         new
                         {
@@ -405,7 +405,7 @@ namespace todoapi.Migrations
                             Description = "Time to get your flu shot",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011686915407360000/JustALittlePrick.png",
                             Name = "Justa 'Lil Prick",
-                            PP = 0
+                            PP = 58
                         },
                         new
                         {
@@ -414,7 +414,7 @@ namespace todoapi.Migrations
                             Description = "Rings whenever you forget a semicolon",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011686999729639585/Remiu.png",
                             Name = "Remiu",
-                            PP = 0
+                            PP = 78
                         },
                         new
                         {
@@ -423,7 +423,7 @@ namespace todoapi.Migrations
                             Description = "Cleans out your fridge entirely",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011687090943168552/Clefridgy.png",
                             Name = "Clefridgy",
-                            PP = 0
+                            PP = 11
                         },
                         new
                         {
@@ -432,7 +432,7 @@ namespace todoapi.Migrations
                             Description = "Teaches you how to dance",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011417750452830228/unknown.png",
                             Name = "ChaCha-mon",
-                            PP = 0
+                            PP = 22
                         },
                         new
                         {
@@ -441,7 +441,7 @@ namespace todoapi.Migrations
                             Description = "Invests in bitcoin and in your future",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011401474997223455/unknown.png",
                             Name = "MoneyBanks",
-                            PP = 0
+                            PP = 95
                         },
                         new
                         {
@@ -450,7 +450,7 @@ namespace todoapi.Migrations
                             Description = "Eats your whole roll of Cookiedough as fast as he can",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011686842841698314/SantasHelper.png",
                             Name = "Santa's Helper",
-                            PP = 0
+                            PP = 89
                         },
                         new
                         {
@@ -459,7 +459,7 @@ namespace todoapi.Migrations
                             Description = "Solves world hunger; doesn't tell you how",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011419920761892904/unknown.png",
                             Name = "Grincheon",
-                            PP = 0
+                            PP = 31
                         },
                         new
                         {
@@ -468,7 +468,7 @@ namespace todoapi.Migrations
                             Description = "Simply walks into Mordor",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011685949102628905/wondusnot.png",
                             Name = "Wondusnot",
-                            PP = 0
+                            PP = 60
                         },
                         new
                         {
@@ -477,7 +477,7 @@ namespace todoapi.Migrations
                             Description = "Finds Nemo - doesn't tell you where",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011361910991630467/Find_nemo.png",
                             Name = "Marlout",
-                            PP = 0
+                            PP = 22
                         },
                         new
                         {
@@ -486,7 +486,7 @@ namespace todoapi.Migrations
                             Description = "Kills Sarah Connor - legally",
                             Image = "https://cdn.discordapp.com/attachments/1011292802468032512/1011680839869927575/unknown.png",
                             Name = "B-back 7000",
-                            PP = 0
+                            PP = 45
                         });
                 });
 #pragma warning restore 612, 618
