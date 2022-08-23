@@ -1,0 +1,140 @@
+﻿button { 
+  padding: 3px;
+  border: transparent 3px;
+  margin: 3px;  
+  background-color: #029ACF;
+  color: white;
+}
+
+.btn {
+  padding: 3px;
+  padding-left: 15px; padding-right: 15px;
+  border: transparent 3px;
+  margin: 3px;  
+  background-color: #029ACF;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #00698f;
+}
+
+.btn-header {
+  background: transparent;
+  color: #777;
+}
+
+.btn-header:hover {
+  color: #d9230f;
+}
+
+.btn-danger {
+  background-color: #d9230f;
+}
+
+.btn-danger:hover {
+  background-color: #921507
+}
+
+.login {
+  position: absolute;
+  margin: 14px;
+  top: 0;
+  right: 0;
+}
+
+.container { 
+  box-sizing: border-box;
+  align-items: flex-end; 
+  position: relative;
+  background-color: #fff;
+  height: 100vh;
+  margin-top: 0px;
+  padding: 2%;
+}
+
+.jumbotron {
+  height: 8%;
+  padding-top: 8px; padding-bottom: 6px;
+  padding-left: 12px; padding-right: 12px;
+  margin-bottom: 0px; margin-top: 18px;
+  margin-left: 10%; margin-right: 10%;
+  background-color: #fff;
+  border: 1.5px solid #029acf;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+
+.navbar {
+  font-family: -apple-system,helvetica neue,open sans,sans-serif!important;
+  background-color: #fff;
+  margin-bottom: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  color: #444;
+}
+
+table {
+  display: table;
+  border-color: grey;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #777;
+}
+
+th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+  display: table-cell;
+  font-weight: bold;
+  text-align: left;
+  color: #777;
+}
+
+td {
+  color: #777;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+  color: #777;
+}
+
+body {
+  color: #777;
+  background-color: #444;
+}
+
+textarea {
+  color: #777;
+}
+
+select {
+  font-size: 64px;
+}
+
+table, td, th {
+  border-collapse: collapse;
+  border-radius: 5px;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px #777;
+  background-color: #fff;
+}
+
+.box {
+  border: 5px solid #029ACF;
+  border-radius: 25px;
+  padding: 2%;
+  background-color: #444;
+}
+
+.image-box {
+  border: 5px solid #029acf;
+  border-radius: 15px;
+  height: 218px;
+}

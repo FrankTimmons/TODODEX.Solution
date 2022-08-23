@@ -14,8 +14,9 @@ namespace ToDoClient.Solution.Controllers
   {
     public IActionResult Index()
     {
-      var allToDos = ToDo.GetToDos();
-      return View(allToDos);
+      // var allToDos = ToDo.GetToDos();
+      // return View(allToDos);
+      return View();
     }
 
     [HttpPost]

@@ -1,14 +1,25 @@
 @using ToDoClient.Solution.Models
 
-@foreach (ToDo todo in Model)
-{
+<h2>To-Dos</h2>
+<br>
+<div class="box">
+<div class="row">
+  <div class="col-3">
+    <img src='https://w7.pngwing.com/pngs/778/783/png-transparent-half-open-silver-top-mount-refrigerator-refrigerator-icon-mini-fridge-angle-kitchen-appliance-domestic-thumbnail.png' class="image-box" />
+  </div>
+  <div class="col-9">
   <table class="table">
     <tr>
-      <th>@todo.Name &emsp; @todo.PP</th>
+      <th>Name &emsp;</th>
+      <th style="text-align:right">PP</th>
     </tr>
-    <tr>
-      <td>@todo.Category</td>
+    <tr colspan="2">
+      <td colspan="2">Category</td>
+    </tr>
+    <tr colspan="2">
+      <td colspan="2">Description</td>
     </tr>
   </table>
+  </div>
   <br>
-}
+</div>
