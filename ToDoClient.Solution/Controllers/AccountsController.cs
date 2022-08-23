@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using ToDoClient.Solution.ViewModels;
 using ToDoClient.Solution.Models;
@@ -54,6 +55,16 @@ namespace ToDoClient.Solution.Controllers
     {
       await _signInManager.SignOutAsync();
       return RedirectToAction("Index");
+    }
+
+    [HttpPost]
+    public async Task<ActionResult> AddToDo(int id)
+    {
+      ApplicationUser user = await _userManager.GetUserAsync(@User);
+      user.ToDos += (":" + id);
+      _context.Entry(user).State = EntityState.Modified;
+      await _context.SaveChangesAsync();
+      return RedirectToAction("Index", "ToDos");
     }
 
   }

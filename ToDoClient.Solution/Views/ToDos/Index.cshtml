@@ -1,27 +1,44 @@
 @using ToDoClient.Solution.Models
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> userManager
 
 <h2>To-Dos</h2>
 <br>
-<div class="box todo-box">
-<div class="row">
-  <div class="col-3">
-    <img src='https://i.pinimg.com/originals/c6/bb/a2/c6bba251b6139139fed212537c56a378.png' class="image-box" />
-  </div>
-  <div class="col-9">
-  <table class="table">
-    <tr>
-      <th>Name &emsp;</th>
-      <th style="text-align:right">PP</th>
-    </tr>
-    <tr colspan="2">
-      <td colspan="2">Category</td>
-    </tr>
-    <tr colspan="2">
-      <td colspan="2">Description</td>
-    </tr>
-  </table>
-  </div>
-  <br>
-</div>
-</div>
+@{ ApplicationUser user = await userManager.GetUserAsync(@User); }
+@if(user.ToDos == null) {
+  <h3>"What are you waiting for? add some todos :]"</h3>
+}
+else
+{ 
+  var result = user.ToDos.Split(":");
+  int[] ints = Array.ConvertAll(result, r => Int32.TryParse(r, out var x) ? x : -1);
+
+  for(int i=1; i<ints.Length; i++){
+    int id = (ints[i]);
+    ToDo todo = ToDo.GetDetails(id);
+    <div class="box todo-box">
+      <div class="row">
+        <div class="col-3">
+          <img src=@todo.Image class="image-box" />
+        </div>
+        <div class="col-9">
+          <table class="table">
+            <tr>
+              <th>@todo.Name &emsp;</th>
+              <th style="text-align:right">PP: @todo.PP</th>
+            </tr>
+            <tr colspan="2">
+              <td colspan="2">Category: @todo.Category</td>
+            </tr>
+            <tr colspan="2">
+              <td colspan="2">@todo.Description</td>
+            </tr>
+          </table>
+        </div>
+        <br>
+      </div>
+    </div>
+    <br>
+  }
+}
 <a href='@Url.Action("Add")'><button class="btn btn-primary">Add a ToDo to your roster!</button></a>

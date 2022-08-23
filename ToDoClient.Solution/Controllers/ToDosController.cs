@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using ToDoClient.Solution.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace ToDoClient.Solution.Controllers
 {
@@ -52,9 +53,10 @@ namespace ToDoClient.Solution.Controllers
       return RedirectToAction("Index");
     }
 
-    public IActionResult Add()
+    public ActionResult Add()
     {
       return View();
     }
+
   }
 }
