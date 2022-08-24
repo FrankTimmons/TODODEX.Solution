@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-using todoAPI.Models;
+using ToDoAPI.Models;
 
-namespace todoAPI.Controllers
+namespace ToDoAPI.Controllers
 {
   [ApiController]
   [Route("api/[controller]")]
   public class ToDosController : ControllerBase
   {
-    private readonly todoAPIContext _db;
+    private readonly ToDoAPIContext _db;
 
-    public ToDosController(todoAPIContext db)
+    public ToDosController(ToDoAPIContext db)
     {
       _db = db;
     }

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Threading.Tasks;
 using ToDoClient.Solution.ViewModels;
 using ToDoClient.Solution.Models;
@@ -61,10 +62,24 @@ namespace ToDoClient.Solution.Controllers
     public async Task<ActionResult> AddToDo(int id)
     {
       ApplicationUser user = await _userManager.GetUserAsync(@User);
-      user.ToDos += (":" + id);
-      _context.Entry(user).State = EntityState.Modified;
-      await _context.SaveChangesAsync();
-      return RedirectToAction("Index", "ToDos");
+      string[] result = user.ToDos.Split(":");
+      if (Array.Exists(result, e => e == id.ToString()))
+      {
+        TempData["ErrorMessage"] = "You've already added this To-Do to your list";
+        return RedirectToAction("Add", "ToDos"); 
+      }
+      else if (result.Length >= 6)
+      {
+        TempData["ErrorMessage"] = "You have too much to do";
+        return RedirectToAction("Index", "ToDos");
+      }
+      else
+      {
+        user.ToDos += (":" + id);
+        _context.Entry(user).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
+        return RedirectToAction("Index", "ToDos");
+      }
     }
 
   }
