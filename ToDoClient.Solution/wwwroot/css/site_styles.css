@@ -1,4 +1,6 @@
-﻿button { 
+﻿@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+button { 
   padding: 3px;
   border: transparent 3px;
   margin: 3px;  
@@ -48,7 +50,7 @@
   box-sizing: border-box;
   align-items: flex-end; 
   position: relative;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   height: 100%;
   min-height: 100vh;
   margin-top: 0px;
@@ -67,14 +69,21 @@
   box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
 }
 
-.navbar {
-  font-family: -apple-system,helvetica neue,open sans,sans-serif!important;
+.navbar, .navbar h2 {
+  font-family: 'Silkscreen', cursive;
+  font-weight: bold;
   background-color: #fff;
   margin-bottom: 0px;
   text-decoration: none;
   padding: 0px;
   padding-left: 50px;
   padding-right: 50px;
+}
+
+.navbar h2 {
+  font-family: 'Silkscreen', cursive;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -98,10 +107,12 @@ th {
   font-weight: bold;
   text-align: left;
   color: #777;
+  font-family: 'Silkscreen', cursive;
 }
 
 td {
   color: #777;
+  font-family: Helvetica;
 }
 
 thead {
@@ -112,8 +123,8 @@ thead {
 }
 
 body {
-  color: #777;
-  background-color: #444;
+  color: forestgreen;
+  background-color: slateblue;
 }
 
 textarea {
@@ -153,21 +164,28 @@ table, td, th {
   margin-bottom: 0px;
 }
 
-nav a {
+.header {
+  font-weight: bold;
+}
+
+nav a, input {
+  font-weight: bold;
   text-decoration: none;
   padding: 10px;
   display: inline-block;
+  font-weight: 100;
 }
-
 nav ul {
   display: inline;
   margin: 0;
   padding: 0;
   font-size: 28px;
+  font-weight: 100;
 }
 nav ul li {
   display: inline-block;
 }
+
 nav ul li:hover { 
   background: #ddd; 
   color: #d9230f;
@@ -175,7 +193,7 @@ nav ul li:hover {
 nav ul li:hover > ul { display: block; }
 nav ul li ul {
   position: absolute;
-  width: 220px;
+  width: 240px;
   display: none;
 }
 nav ul li ul li {
@@ -188,11 +206,15 @@ nav ul li ul li:hover { background: #ccc; }
 nav ul ul ul li {
 	position: relative;
 	top:-70px; 
-	left:211px;
+	left:231px;
 }
 
 .link {
   color: #029ACF;
+  border: none;
+  background-color: transparent;
+  outline: none
+;
 }
 .link:hover {
   color:#029ACF;
@@ -209,10 +231,26 @@ nav ul ul ul li {
 }
 
 #ToDoList{
+  font-family: 'Silkscreen', cursive;
+  text-align: center;
   color: purple;
+  width: auto;
+  padding: 2px;
+  margin: 5px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
 }
 
 #homeButton{
   display: block;
   margin: auto;
+}
+
+#homeImg{
+  display: block;
+  margin: auto;
+  margin-top: 1%;
+  width: 45%;
+  height: auto;
 }

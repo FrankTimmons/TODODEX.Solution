@@ -53,6 +53,7 @@ namespace ToDoClient.Solution.Controllers
       return RedirectToAction("Index");
     }
 
+    [AllowAnonymous]
     public ActionResult Add()
     {
       return View();

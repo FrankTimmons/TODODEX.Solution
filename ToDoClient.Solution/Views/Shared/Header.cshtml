@@ -10,6 +10,7 @@
     <a class="header">&ensp;Home&ensp;</a>
     <ul>
       <li><a href='@Url.Action("Index", "Home")' class="link">Home</a></li>
+      <li><a href="https://github.com/FrankTimmons/TODODEX.Solution" class="link">Info</a></li>
     </ul>
   </li></ul>
   <ul><li>
@@ -17,7 +18,7 @@
     <ul>
       <li><a href='@Url.Action("Add", "ToDos")' class="link">All ToDos</a></li>
       <li><a href='@Url.Action("Index", "ToDos")' class="link">Your ToDos</a>
-        @if (user.ToDos != null){
+        @if (User.Identity.IsAuthenticated && user.ToDos != null){
           <ul>
           @{
             var result = user.ToDos.Split(":");
@@ -40,6 +41,12 @@
       <li><a href='@Url.Action("Index", "Accounts")' class="link">Account</a></li>
       <li><a href='@Url.Action("Login", "Accounts")' class="link">Log In</a></li>
       <li><a href='@Url.Action("Register", "Accounts")' class="link">Register</a></li>
+      @if(User.Identity.IsAuthenticated) {
+        @using (Html.BeginForm("LogOff", "Accounts", FormMethod.Post))
+        {
+          <li><input type="submit" class="link" value="Log Out" /></li>
+        }
+      }
     </ul>
   </li></ul>
 </nav>

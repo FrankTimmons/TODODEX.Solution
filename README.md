@@ -1,6 +1,6 @@
 # TODODEX
  
-#### By _**Frank Timmons, Max Alvord, Zachary Waggoner, Anthony Difalco, Matt Wilkinson, Grace Kostanich**_  
+#### By _**Frank Timmons, Max Alvord, Zachary Waggoner, Anthony DiFalco, Matt Wilkinson, Grace Kostanich**_  
  
 #### _This is a project containing an API and a website ..._  
  

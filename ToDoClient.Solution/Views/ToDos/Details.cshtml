@@ -3,19 +3,18 @@
 @using Microsoft.AspNetCore.Identity
 @inject UserManager<ApplicationUser> userManager
 
-<h4>ToDo Details</h4>
+<h1>@Model.Name</h1>
 
-<img src='@Model.Image' style="width:400px" />
+<img src='@Model.Image' style="width:400px; float:left;" />
 <br><br>
 <table class="table">
-  <tr><th>@Model.Name</th></tr>
-  <tr><td>@Model.PP</td></tr>
-  <tr><td>@Model.Category</td></tr>
-  <tr><td>@Model.Description</td></tr>
+  <tr><td>PP: @Model.PP</td></tr>
+  <tr><td>Category: @Model.Category</td></tr>
+  <tr><td>Description: @Model.Description</td></tr>
 </table>
 
 @using (Html.BeginForm("AddToDo", "Accounts", new { id = @Model.ToDoId}))
 {
   @Html.HiddenFor(model => model.ToDoId)
-  <button type="submit">Save</button>
+  <button class="w3-button w3-border w3-hover-indigo" type="submit">Save</button>
 }

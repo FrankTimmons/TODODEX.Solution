@@ -1,15 +1,12 @@
 @using ToDoClient.Solution.Models;
 @model ToDoClient.Solution.Models.ToDo;
 
-@if(User.Identity.IsAuthenticated)
-{
-  var result = ToDo.GetToDos();
-  <h2>Select a ToDo to see its details</h2>
-  <br>
-  <ul id="AddList">
-    @foreach(ToDo toDo in result)
-    {
-      <li id="ToDoList">@Html.ActionLink(@toDo.Name, "Details", new { id = @toDo.ToDoId })</li>
-    }
-  </ul>
-}
+@{ var result = ToDo.GetToDos(); }
+<h2>Select a ToDo to see its details</h2>
+<br>
+<div id="AddList">
+  @foreach(ToDo toDo in result)
+  {
+    <p><a href='@Url.Action("Details", new { id = @toDo.ToDoId })' id="ToDoList"><button class="w3-button w3-border w3-hover-light-blue" style="width:90%">@toDo.Name</button></a></p>
+  }
+</div>
