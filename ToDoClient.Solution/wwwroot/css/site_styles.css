@@ -130,9 +130,9 @@ table, td, th {
   box-shadow: 0 0 0 1px #777;
   background-color: #fff;
   border-spacing: 0 !important;
-  padding: 2px !important;
-  padding-left: 8px !important;
-  padding-right: 8px !important;
+  padding: 4px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
 
 .box {
@@ -145,7 +145,7 @@ table, td, th {
 .image-box {
   border: 5px solid #029acf;
   border-radius: 15px;
-  height: 218px;
+  width: 218px;
   background-color: #999;
 }
 
@@ -172,7 +172,7 @@ nav ul li:hover {
   background: #ddd; 
   color: #d9230f;
 }
-nav ul li:hover ul { display: block; }
+nav ul li:hover > ul { display: block; }
 nav ul li ul {
   position: absolute;
   width: 220px;
@@ -185,6 +185,11 @@ nav ul li ul li {
 }
 nav ul li ul li a { display: block !important; }
 nav ul li ul li:hover { background: #ccc; }
+nav ul ul ul li {
+	position: relative;
+	top:-70px; 
+	left:211px;
+}
 
 .link {
   color: #029ACF;
@@ -205,4 +210,9 @@ nav ul li ul li:hover { background: #ccc; }
 
 #ToDoList{
   color: purple;
+}
+
+#homeButton{
+  display: block;
+  margin: auto;
 }

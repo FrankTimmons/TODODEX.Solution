@@ -9,7 +9,7 @@
   <ul id="AddList">
     @foreach(ToDo toDo in result)
     {
-      <li id="ToDoList">@Html.ActionLink(@toDo.Name, "Details", new { id = @toDo.ToDoId })</li> <br>
+      <li id="ToDoList">@Html.ActionLink(@toDo.Name, "Details", new { id = @toDo.ToDoId })</li>
     }
   </ul>
 }

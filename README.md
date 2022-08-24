@@ -46,22 +46,22 @@ _This API is using Swagger (an open-source API tool) to describe its structure a
 ---
 ## Endpoints
  
-Base URL: https://localhost:5000
+Base URL: https://localhost:5002
  
 #### HTTP Request
  
 ```
-GET api/ToDos
-POST api/*
-DELETE api/*/{id}
-PUT api/*/{id}
-GET api/*/{id}
+GET api/todos
+POST api/todos
+DELETE api/todos/{id}
+PUT api/todos/{id}
+GET api/todos/{id}
 ```
  
 #### Example Query
  
 ```
-https://localhost:5002/api/*/1
+https://localhost:5002/api/todos/1
 ```
  
 ---
