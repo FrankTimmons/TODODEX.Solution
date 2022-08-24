@@ -53,7 +53,7 @@ button {
   background-color: rgb(255, 255, 255);
   height: 100%;
   min-height: 100vh;
-  margin-top: 0px;
+  margin-top: 20px;
   padding: 2%;
 }
 
@@ -92,9 +92,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 table {
+  float: left;
   display: table;
   border-color: grey;
-  box-sizing: border-box;
+  box-sizing: content-box;
+  width: 50%;
   border-collapse: collapse;
   border-spacing: 0;
   color: #777;
@@ -175,6 +177,7 @@ nav a, input {
   display: inline-block;
   font-weight: 100;
 }
+
 nav ul {
   display: inline;
   margin: 0;
@@ -182,18 +185,16 @@ nav ul {
   font-size: 28px;
   font-weight: 100;
 }
+
 nav ul li {
   display: inline-block;
 }
-
-nav ul li:hover { 
-  background: #ddd; 
-  color: #d9230f;
-}
+nav ul li:hover { background: #ddd; }
 nav ul li:hover > ul { display: block; }
 nav ul li ul {
   position: absolute;
-  width: 240px;
+  min-width: 240px;
+  width: auto;
   display: none;
 }
 nav ul li ul li {
@@ -213,9 +214,9 @@ nav ul ul ul li {
   color: #029ACF;
   border: none;
   background-color: transparent;
-  outline: none
-;
+  outline: none;
 }
+
 .link:hover {
   color:#029ACF;
   text-decoration: none;
@@ -253,4 +254,36 @@ nav ul ul ul li {
   margin-top: 1%;
   width: 45%;
   height: auto;
+}
+
+.gamerNumbers {
+  text-align: left;
+  font-size: 20px;
+  font-family: 'Silkscreen', cursive; 
+  font-weight: bolder;
+  color: black;
+  text-transform: uppercase;
+}
+
+.property{
+  margin-top: -25px;
+  color: red;
+  text-align: right;
+  font-family: 'Silkscreen', cursive; 
+  font-weight: bolder;
+}
+
+.gamerList {
+  margin-top: 100px;
+  margin-right: 200px;
+}
+
+.gamerHeader {
+  text-align: center;
+  font-family: 'Silkscreen', cursive; 
+  font-weight: bold;
+}
+
+.table {
+  float: left;
 }

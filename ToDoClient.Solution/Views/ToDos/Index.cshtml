@@ -35,7 +35,7 @@ else
               <td>@todo.Description</td>
               <td align="right">
               @using (Html.BeginForm("Delete", "Accounts", new { id = @todo.ToDoId })){
-                <button type="submit" class="btn btn-primary">Complete this To Do</button>
+                <button type="submit" class="w3-button w3-border w3-hover-light-blue">Release ToDo to the wild</button>
               }
               </td>
             </tr>
@@ -47,9 +47,10 @@ else
     <br>
   }
 }
-<a href='@Url.Action("Add")'><button class="btn btn-primary">Add a ToDo to your roster!</button></a>
+<a href='@Url.Action("Add")'><button class="w3-button w3-border w3-hover-light-blue">Add a ToDo to your roster!</button></a>
+
 @if (user.ToDos != ""){
   @using (Html.BeginForm("DeleteAll", "Accounts", FormMethod.Post)){
-    <button type="submit" class="btn btn-primary">Delete all ToDos</button>
+    <button type="submit" class="w3-button w3-border w3-hover-light-blue">Delete all ToDos</button>
   }
 }
