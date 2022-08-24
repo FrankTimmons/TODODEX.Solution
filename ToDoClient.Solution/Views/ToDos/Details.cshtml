@@ -3,26 +3,32 @@
 @using Microsoft.AspNetCore.Identity
 @inject UserManager<ApplicationUser> userManager
 
-<h1 class="gamerHeader">@Model.Name</h1>
+<style>body { background-image: url(https://cdn.discordapp.com/attachments/1011292802468032512/1012117736664604723/dex.png); background-position: 0px 20px; background-attachment: bottom; background-size: cover;} .container {background: transparent;}</style>
 
-<img src='@Model.Image' style="width:400px; float:left; margin-right: 50px; margin-left: 200px; font-family: 'Silkscreen', cursive; font-weight: bold;" />
-<!-- <div class="gamerList">
-  <p class="gamerNumbers">PP: </p>
-  <p class="property">@Model.PP</p>
-  <p class="gamerNumbers">Category: </p>
-  <p class="property">@Model.Category</p>
-  <p class="gamerNumbers">Description:</p>
-  <p class="property">@Model.Description</p>
-</div> -->
+<div class="gamerCard"> 
+  <h1 class="gamerHeader">@Model.Name</h1>
 
-<table class="table">
-  <tr><td>PP: @Model.PP</td></tr>
-  <tr><td>Category: @Model.Category</td></tr>
-  <tr><td>Description: @Model.Description</td></tr>
-</table>
+    <img src='@Model.Image' style="width: 90%; font-family: 'Silkscreen', cursive; font-weight: bold; margin: auto; display: block; tex-align: center;  margin-bottom: 20px; " />
+    <div class="gamerList">
+      <p class="gamerNumbers">PP: </p>
+      <p class="property">@Model.PP</p>
+      <p class="gamerNumbers">Category: </p>
+      <p class="property">@Model.Category</p>
+      <p class="gamerNumbers">Description:</p>
+      <p class="property">@Model.Description</p>
+    </div>
+
+    <!-- <table class="table">
+      <tr><td>PP: @Model.PP</td></tr>
+      <tr><td>Category: @Model.Category</td></tr>
+      <tr><td>Description: @Model.Description</td></tr>
+    </table> -->
 
 @using (Html.BeginForm("AddToDo", "Accounts", new { id = @Model.ToDoId}))
 {
   @Html.HiddenFor(model => model.ToDoId)
-  <button class="w3-button w3-border w3-hover-indigo" type="submit">Save</button>
+  <button id="save-button" class="w3-button w3-border w3-hover-indigo" type="submit">Save</button>
 }
+
+</div>
+

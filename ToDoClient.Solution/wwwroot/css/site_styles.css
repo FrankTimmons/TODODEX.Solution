@@ -266,16 +266,12 @@ nav ul ul ul li {
 }
 
 .property{
-  margin-top: -25px;
-  color: red;
-  text-align: right;
+  text-align: left;
+  font-size: 20px;
   font-family: 'Silkscreen', cursive; 
   font-weight: bolder;
-}
-
-.gamerList {
-  margin-top: 100px;
-  margin-right: 200px;
+  color: red;
+  text-transform: uppercase;
 }
 
 .gamerHeader {
@@ -286,4 +282,41 @@ nav ul ul ul li {
 
 .table {
   float: left;
+}
+
+.gamerCard {
+  background-color: white;
+  border-radius: 1rem;
+  border: solid black;
+  margin: auto;
+  display: block;
+  text-align: center;
+  width: 50%;
+}
+
+.gamerList{
+  text-align: center;
+  margin: 10px;
+}
+
+.w3-button {
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#save-button {
+  color: purple;
+  background-color: ;
+  font-family: 'Silkscreen', cursive;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 1rem;
 }
