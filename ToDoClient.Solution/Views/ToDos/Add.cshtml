@@ -4,11 +4,12 @@
 @if(User.Identity.IsAuthenticated)
 {
   var result = ToDo.GetToDos();
-  
+  <h2>Select a ToDo to see its details</h2>
+  <br>
   <ul id="AddList">
     @foreach(ToDo toDo in result)
     {
-      <li>@Html.ActionLink(@toDo.Name, "Details", new { id = @toDo.ToDoId })</li>
+      <li id="ToDoList">@Html.ActionLink(@toDo.Name, "Details", new { id = @toDo.ToDoId })</li> <br>
     }
   </ul>
 }

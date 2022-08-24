@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using ToDoClient.Solution.ViewModels;
 using ToDoClient.Solution.Models;
 
@@ -48,6 +49,7 @@ namespace ToDoClient.Solution.Controllers
       if (result.Succeeded)
       { return RedirectToAction("Index"); }
       else
+      ViewBag.failedLogin = "Login Failed";
       { return View(); }
     }
 
@@ -68,7 +70,7 @@ namespace ToDoClient.Solution.Controllers
         TempData["ErrorMessage"] = "You've already added this To-Do to your list";
         return RedirectToAction("Add", "ToDos"); 
       }
-      else if (result.Length >= 6)
+      else if (result.Length >= 5)
       {
         TempData["ErrorMessage"] = "You have too much to do";
         return RedirectToAction("Index", "ToDos");
@@ -82,5 +84,43 @@ namespace ToDoClient.Solution.Controllers
       }
     }
 
+
+    //  public ActionResult Delete(int id)
+    // {
+    //     var thisTreat = _context..FirstOrDefault(treat => treat.TreatId == id);
+    //     return View(thisTreat);
+    // }
+    
+    // [HttpPost, ActionName("Delete")]
+    // public ActionResult DeleteConfirmed(int id)
+    // {
+    //     var thisTreat = _db.Treats.FirstOrDefault(treat => treat.TreatId == id);
+    //     _context.Treats.Remove(thisTreat);
+    //     _context.SaveChanges();
+    //     return RedirectToAction("Index");
+    // }
+
+    [HttpPost]
+    public async Task<ActionResult> DeleteAll()
+    {
+      ApplicationUser user = await _userManager.GetUserAsync(@User);
+      user.ToDos="";
+      _context.Entry(user).State = EntityState.Modified;
+      await _context.SaveChangesAsync();
+      return RedirectToAction("Index", "ToDos");
+    }
+
+    [HttpPost]
+    public async Task<ActionResult> Delete(int id)
+    {
+      string ToDoId = id.ToString();
+      ApplicationUser user = await _userManager.GetUserAsync(@User);
+      var todos = new List<string>(user.ToDos.Split(":"));
+      todos.Remove(ToDoId);
+      user.ToDos = String.Join(":", todos.ToArray());
+      _context.Entry(user).State = EntityState.Modified;
+      await _context.SaveChangesAsync();
+      return RedirectToAction("Index", "ToDos");
+    }
   }
 }

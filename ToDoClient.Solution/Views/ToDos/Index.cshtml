@@ -3,6 +3,7 @@
 @inject UserManager<ApplicationUser> userManager
 
 <h2>To-Dos</h2>
+
 <br>
 @{ ApplicationUser user = await userManager.GetUserAsync(@User); }
 @if(user.ToDos == null) {
@@ -31,7 +32,12 @@ else
               <td colspan="2">Category: @todo.Category</td>
             </tr>
             <tr colspan="2">
-              <td colspan="2">@todo.Description</td>
+              <td>@todo.Description</td>
+              <td align="right">
+              @using (Html.BeginForm("Delete", "Accounts", new { id = @todo.ToDoId })){
+                <button type="submit" class="btn btn-primary">Complete this To Do</button>
+              }
+              </td>
             </tr>
           </table>
         </div>
@@ -42,3 +48,8 @@ else
   }
 }
 <a href='@Url.Action("Add")'><button class="btn btn-primary">Add a ToDo to your roster!</button></a>
+@if (user.ToDos != ""){
+  @using (Html.BeginForm("DeleteAll", "Accounts", FormMethod.Post)){
+    <button type="submit" class="btn btn-primary">Delete all ToDos</button>
+  }
+}

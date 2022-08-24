@@ -126,10 +126,13 @@ select {
 
 table, td, th {
   border-collapse: collapse;
-  border-radius: 5px;
   border-style: hidden;
   box-shadow: 0 0 0 1px #777;
   background-color: #fff;
+  border-spacing: 0 !important;
+  padding: 2px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
 }
 
 .box {
@@ -194,4 +197,12 @@ nav ul li ul li:hover { background: #ccc; }
 #AddList{
   column-count: 4;
   column-gap: 20px;
+}
+
+#failedLogin{
+  color: #d9230f;
+}
+
+#ToDoList{
+  color: purple;
 }

@@ -2,7 +2,7 @@
  
 #### By _**Frank Timmons, Max Alvord, Zachary Waggoner, Anthony Difalco, Matt Wilkinson, Grace Kostanich**_  
  
-#### _This is an API that ..._  
+#### _This is a project containing an API and a website ..._  
  
 ---
  
@@ -15,9 +15,11 @@
 * _Swagger_
  
 ---
+# /ToDoAPI.Solution
+
 ## Description
  
-This is an API built on ASP.NET Core MVC that's populated with seed data of TODO characters
+This is an API built on ASP.NET Core MVC that's populated with seed data of TODO characters   
 _Written in C#_
  
 ---
@@ -49,7 +51,7 @@ Base URL: https://localhost:5000
 #### HTTP Request
  
 ```
-GET api/To
+GET api/ToDos
 POST api/*
 DELETE api/*/{id}
 PUT api/*/{id}
@@ -84,8 +86,8 @@ Download MySQL Workbench, follow the setup wizard & create a localhost server on
 <li>Run,  
 <strong>$ git clone https://github.com/FrankTimmons/TODODEX.Solution.git</strong>
 <li>In the terminal, navigate to the main root directory, "TODODEX.Solution".
-<li> Navigate into the <em>folder</em>, "todoAPI.Solution".
-<li> Navigate into the <em>projects</em> root directory, "todoAPI.Solution".
+<li> Navigate into the <em>folder</em>, "ToDoAPI.Solution".
+<li> Navigate into the <em>projects</em> root directory, "ToDoAPI.Solution".
 <li>Move onto "SQL Workbench Configuration" instructions below to build the necessary database.
 <br>
 </details>
@@ -119,23 +121,25 @@ Download MySQL Workbench, follow the setup wizard & create a localhost server on
 <small>**Note: you must include your username in the code block section labeled "YOUR-USERNAME-HERE".</small><br>
 <small>***Note: if you plan to push this cloned project to a public-facing repository, remember to add the appsettings.json file to your .gitignore before doing so.</small>
  
-<li>In root directory of project folder "AnimalShelter", run  
+<li>In root directory of the project folder "ToDoAPI", run  
 <strong>$ dotnet ef migrations add restoreDatabase</strong>
 <li>Then run <strong>$ dotnet ef database update</strong>
  
 <ol>
   <li>Open SQL Workbench.
-  <li>Navigate to "animal_shelter" schema.
+  <li>Navigate to "todoapi" schema.
   <li>Click the drop down, select "Tables" drop down.
-  <li>Verify the table, you should see <strong>animals</strong>.
+  <li>Verify the table, you should see <strong>todoapi</strong>.
  
 </details>
  
 <details>
 <summary><strong>To Run</strong></summary>
 Navigate to:  
-   <pre>AnimalShelter.Solution
-   └── AnimalShelter
+   <pre>TODODEX.Solution
+   └── ToDoAPI.Solution
+      └── ToDoAPI
+      </pre>
  
  
 Run ```$ dotnet restore``` in the terminal.<br>
@@ -145,6 +149,101 @@ Run ```$ dotnet run``` in the terminal.
  
 This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be compatible with other versions. Your milage may vary.
  
+
+---
+
+# /ToDoClient.Solution
+
+## Description
+ 
+This is a website built on ASP.NET Core MVC that's using a custom built API   
+_Written in C#_
+ 
+---
+ 
+## Setup and Installation Requirements
+**This Setup assumes you have GitBash and MySQL Workbench pre-installed.  
+If needed, please navigate to these links:  
+https://git-scm.com/download/  
+Download Git and follow the setup wizard.  
+https://dev.mysql.com/downloads/workbench/  
+Download MySQL Workbench, follow the setup wizard & create a localhost server on port 3306**
+ 
+ 
+*Note: Keep track of your username and password, this will be used in the connection link under,*  
+"**SQL Workbench Configuration**" > "2. Insert the following code:"
+ 
+<details>
+<summary><strong>Initial Setup</strong></summary>
+<ol>
+<li>Copy the git repository url: https://github.com/FrankTimmons/TODODEX.Solution.git
+<li>Open a terminal and navigate to your Desktop with <strong>cd</strong> command
+<li>Run,  
+<strong>$ git clone https://github.com/FrankTimmons/TODODEX.Solution.git</strong>
+<li>In the terminal, navigate to the main root directory, "TODODEX.Solution".
+<li> Navigate into the <em>folder</em>, "ToDoClient.Solution".
+<li> Navigate into the <em>projects</em> root directory, "ToDoClient.Solution".
+<li>Move onto "SQL Workbench Configuration" instructions below to build the necessary database.
+<br>
+</details>
+ 
+<details>
+<summary><strong>SQL Workbench Configuration</strong></summary>
+<ol>
+<li>Create an appsettings.json file in the "ToDoClient" directory  
+   <pre>ToDoClient.Solution
+   └── ToDoClient
+    └── appsettings.json</pre>
+ 
+<li> Insert the following code: <br>
+ 
+<pre>
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Port=3306;database=tododex_users;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
+  }
+}
+</pre>
+<small>*Note: you must include your password in the code block section labeled "YOUR-PASSWORD-HERE".</small><br>
+<small>**Note: you must include your username in the code block section labeled "YOUR-USERNAME-HERE".</small><br>
+<small>***Note: if you plan to push this cloned project to a public-facing repository, remember to add the appsettings.json file to your .gitignore before doing so.</small>
+ 
+<li>In root directory of the project folder "ToDoClient", run  
+<strong>$ dotnet ef migrations add restoreDatabase</strong>
+<li>Then run <strong>$ dotnet ef database update</strong>
+ 
+<ol>
+  <li>Open SQL Workbench.
+  <li>Navigate to "tododex_users" schema.
+  <li>Click the drop down, select "Tables" drop down.
+  <li>Verify the table, you should see <strong>tododex_users</strong>.
+ 
+</details>
+ 
+<details>
+<summary><strong>To Run</strong></summary>
+Navigate to:  
+   <pre>TODODEX.Solution
+   └── ToDoClient.Solution
+      └── ToDoClient
+      </pre>
+ 
+ 
+Run ```$ dotnet restore``` in the terminal.<br>
+Run ```$ dotnet run``` in the terminal.
+</details>
+<br>
+ 
+This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be compatible with other versions. Your milage may vary.
+
 ---
  
 >#### _**A Big Thanks To:**_
@@ -163,4 +262,4 @@ This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be comp
 _None_
  
  
-Copyright (c) 8/19/2022 Grace Kostanich
+Copyright (c) 8/22/2022 Frank Timmons, Max Alvord, Zachary Waggoner, Anthony Difalco, Matt Wilkinson, Grace Kostanich
