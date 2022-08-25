@@ -1,6 +1,6 @@
 # TODODEX
  
-#### By _**Frank Timmons, Max Alvord, Zachary Waggoner, Anthony DiFalco, Matt Wilkinson, Grace Kostanich**_  
+#### By _**Frank Timmons, Max Alvord, Zachary Waggoner, Anthony DiℲalco, Matt Wilkinson, Grace Kostanich**_  
  
 #### _This is a project containing a website that pings a homemade API to get information on a list of ToDos or a users personal roster_  
  
@@ -14,8 +14,126 @@
 * _Entity Framework_
 * _Swagger_
  
+## Setup and Installation Requirements
+**This Setup assumes you have GitBash and MySQL Workbench pre-installed.  
+If needed, please navigate to these links:  
+https://git-scm.com/download/  
+Download Git and follow the setup wizard.  
+https://dev.mysql.com/downloads/workbench/  
+Download MySQL Workbench, follow the setup wizard & create a localhost server on port 3306**
+ 
+ 
+*Note: Keep track of your username and password, this will be used in the connection link under,*  
+"**SQL Workbench Configuration**" > "2. Insert the following code:"
+
+
 ---
-# /ToDoAPI.Solution
+# ToDoClient.Solution Setup
+
+## Description
+ 
+This is a website built on ASP.NET Core MVC that's using a custom built API   
+_Written in C#_
+ 
+---
+ 
+ 
+<details>
+<summary><strong>Initial Setup</strong></summary>
+<ol>
+<li>Copy the git repository url: https://github.com/FrankTimmons/TODODEX.Solution.git
+<li>Open a terminal and navigate to your Desktop with <strong>cd</strong> command
+<li>Run,  
+<strong>$ git clone https://github.com/FrankTimmons/TODODEX.Solution.git</strong>
+<li>In the terminal, navigate to the main root directory, "TODODEX.Solution".
+<li> Navigate into the <em>projects</em> root directory, "ToDoClient.Solution".
+<li>Move onto "SQL Workbench Configuration" instructions below to build the necessary database.
+<br>
+</details>
+ 
+<details>
+<summary><strong>SQL Workbench Configuration</strong></summary>
+<ol>
+<li>Create an appsettings.json file in the "ToDoClient" directory  
+   <pre>ToDoClient.Solution
+   └── appsettings.json</pre>
+ 
+<li> Insert the following code: <br>
+ 
+<pre>
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Port=3306;database=tododex_users;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
+  }
+}
+</pre>
+<small>*Note: you must include your password in the code block section labeled "YOUR-PASSWORD-HERE".</small><br>
+<small>**Note: you must include your username in the code block section labeled "YOUR-USERNAME-HERE".</small><br>
+<small>***Note: if you plan to push this cloned project to a public-facing repository, remember to add the appsettings.json file to your .gitignore before doing so.</small>
+ 
+<li>In root directory of the project folder "ToDoClient.Solution", run  
+<strong>$ dotnet ef migrations add restoreDatabase</strong>
+<li>Then run <strong>$ dotnet ef database update</strong>
+ 
+<ol>
+  <li>Open SQL Workbench.
+  <li>Navigate to "tododex_users" schema.
+  <li>Click the drop down, select "Tables" drop down.
+  <li>Verify the table, you should see <strong>tododex_users</strong>.
+ 
+</details>
+ 
+<details>
+<summary><strong>To Run</strong></summary>
+Navigate to:  
+   <pre>TODODEX.Solution
+   └── ToDoClient.Solution
+      </pre>
+ 
+ 
+Run ```$ dotnet restore``` in the terminal.<br>
+Run ```$ dotnet run``` in the terminal.
+</details>
+<br>
+ 
+This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be compatible with other versions. Your milage may vary.
+
+---
+
+# ToDoAPI.Solution Setup
+
+
+<strong>⚠️Locally creating your API is not required to run the client side of the application. Only follow the steps below if you wish to have the API hosted locally on your computer. If you decide not to host the API on your computer, use the endpoints listed below.⚠️</strong>
+
+## Endpoints
+ 
+Base URL: https://tododexapi.azurewebsites.net/
+ 
+#### HTTP Request
+ 
+```
+GET api/todos
+POST api/todos
+DELETE api/todos/{id}
+PUT api/todos/{id}
+GET api/todos/{id}
+```
+ 
+#### Example Query
+ 
+```
+https://tododexapi.azurewebsites.net/api/todos/1
+```
+ 
+---
 
 ## Description
  
@@ -65,19 +183,7 @@ https://localhost:5002/api/todos/1
 ```
  
 ---
- 
-## Setup and Installation Requirements
-**This Setup assumes you have GitBash and MySQL Workbench pre-installed.  
-If needed, please navigate to these links:  
-https://git-scm.com/download/  
-Download Git and follow the setup wizard.  
-https://dev.mysql.com/downloads/workbench/  
-Download MySQL Workbench, follow the setup wizard & create a localhost server on port 3306**
- 
- 
-*Note: Keep track of your username and password, this will be used in the connection link under,*  
-"**SQL Workbench Configuration**" > "2. Insert the following code:"
- 
+
 <details>
 <summary><strong>Initial Setup</strong></summary>
 <ol>
@@ -86,7 +192,6 @@ Download MySQL Workbench, follow the setup wizard & create a localhost server on
 <li>Run,  
 <strong>$ git clone https://github.com/FrankTimmons/TODODEX.Solution.git</strong>
 <li>In the terminal, navigate to the main root directory, "TODODEX.Solution".
-<li> Navigate into the <em>folder</em>, "ToDoAPI.Solution".
 <li> Navigate into the <em>projects</em> root directory, "ToDoAPI.Solution".
 <li>Move onto "SQL Workbench Configuration" instructions below to build the necessary database.
 <br>
@@ -97,8 +202,7 @@ Download MySQL Workbench, follow the setup wizard & create a localhost server on
 <ol>
 <li>Create an appsettings.json file in the "ToDoAPI" directory  
    <pre>ToDoAPI.Solution
-   └── ToDoAPI
-    └── appsettings.json</pre>
+   └── appsettings.json</pre>
  
 <li> Insert the following code: <br>
  
@@ -113,10 +217,11 @@ Download MySQL Workbench, follow the setup wizard & create a localhost server on
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=todoapi;uid=root;pwd=epicodus;"
+    "DefaultConnection": "Server=localhost;Port=3306;database=todoapi;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
   }
 }
 </pre>
+
 <small>*Note: you must include your password in the code block section labeled "YOUR-PASSWORD-HERE".</small><br>
 <small>**Note: you must include your username in the code block section labeled "YOUR-USERNAME-HERE".</small><br>
 <small>***Note: if you plan to push this cloned project to a public-facing repository, remember to add the appsettings.json file to your .gitignore before doing so.</small>
@@ -138,7 +243,6 @@ Download MySQL Workbench, follow the setup wizard & create a localhost server on
 Navigate to:  
    <pre>TODODEX.Solution
    └── ToDoAPI.Solution
-      └── ToDoAPI
       </pre>
  
  
@@ -148,118 +252,16 @@ Run ```$ dotnet run``` in the terminal.
 <br>
  
 This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be compatible with other versions. Your milage may vary.
- 
-
----
-
-# /ToDoClient.Solution
-
-## Description
- 
-This is a website built on ASP.NET Core MVC that's using a custom built API   
-_Written in C#_
- 
----
- 
-## Setup and Installation Requirements
-**This Setup assumes you have GitBash and MySQL Workbench pre-installed.  
-If needed, please navigate to these links:  
-https://git-scm.com/download/  
-Download Git and follow the setup wizard.  
-https://dev.mysql.com/downloads/workbench/  
-Download MySQL Workbench, follow the setup wizard & create a localhost server on port 3306**
- 
- 
-*Note: Keep track of your username and password, this will be used in the connection link under,*  
-"**SQL Workbench Configuration**" > "2. Insert the following code:"
- 
-<details>
-<summary><strong>Initial Setup</strong></summary>
-<ol>
-<li>Copy the git repository url: https://github.com/FrankTimmons/TODODEX.Solution.git
-<li>Open a terminal and navigate to your Desktop with <strong>cd</strong> command
-<li>Run,  
-<strong>$ git clone https://github.com/FrankTimmons/TODODEX.Solution.git</strong>
-<li>In the terminal, navigate to the main root directory, "TODODEX.Solution".
-<li> Navigate into the <em>folder</em>, "ToDoClient.Solution".
-<li> Navigate into the <em>projects</em> root directory, "ToDoClient.Solution".
-<li>Move onto "SQL Workbench Configuration" instructions below to build the necessary database.
-<br>
-</details>
- 
-<details>
-<summary><strong>SQL Workbench Configuration</strong></summary>
-<ol>
-<li>Create an appsettings.json file in the "ToDoClient" directory  
-   <pre>ToDoClient.Solution
-   └── ToDoClient
-    └── appsettings.json</pre>
- 
-<li> Insert the following code: <br>
- 
-<pre>
-{
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft": "Warning",
-      "Microsoft.Hosting.Lifetime": "Information"
-    }
-  },
-  "AllowedHosts": "*",
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=tododex_users;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
-  }
-}
-</pre>
-<small>*Note: you must include your password in the code block section labeled "YOUR-PASSWORD-HERE".</small><br>
-<small>**Note: you must include your username in the code block section labeled "YOUR-USERNAME-HERE".</small><br>
-<small>***Note: if you plan to push this cloned project to a public-facing repository, remember to add the appsettings.json file to your .gitignore before doing so.</small>
- 
-<li>In root directory of the project folder "ToDoClient", run  
-<strong>$ dotnet ef migrations add restoreDatabase</strong>
-<li>Then run <strong>$ dotnet ef database update</strong>
- 
-<ol>
-  <li>Open SQL Workbench.
-  <li>Navigate to "tododex_users" schema.
-  <li>Click the drop down, select "Tables" drop down.
-  <li>Verify the table, you should see <strong>tododex_users</strong>.
- 
-</details>
- 
-<details>
-<summary><strong>To Run</strong></summary>
-Navigate to:  
-   <pre>TODODEX.Solution
-   └── ToDoClient.Solution
-      └── ToDoClient
-      </pre>
- 
- 
-Run ```$ dotnet restore``` in the terminal.<br>
-Run ```$ dotnet run``` in the terminal.
-</details>
-<br>
- 
-This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be compatible with other versions. Your milage may vary.
-
----
- 
->#### _**A Big Thanks To:**_
->#### **Garrett Hays @ https://github.com/GarrettHays**    
->#### **Zachary Waggoner @ https://github.com/CyndaZ42**  
->#### _**for amazing README formatting and instructions!**_  
  
 ---
  
 ## Known Bugs
  
 * _While hosting a live share session, the max user connections may exceed the limit of 10 even if the amount of connections is less than that. This is possibly due to using the API database in conjuction with the client._
+* _When using server with Azure, Swagger cannot be found (you'll recieve error 404)_
  
 ## License
  
-_None_
- 
- 
-Copyright (c) 8/22/2022 Frank Timmons, Max Alvord, Zachary Waggoner, Anthony Difalco, Matt Wilkinson, Grace Kostanich
+[MIT](https://opensource.org/osd)
+
+Copyright (c) 8/22/2022 Frank Timmons, Max Alvord, Zachary Waggoner, Anthony DiℲalco, Matt Wilkinson, Grace Kostanich
