@@ -365,6 +365,7 @@ nav ul ul ul li {
 #logText{
   text-align: center;
 }
+
 #kerl{
   display: inline;
   width: 250px;
@@ -373,7 +374,6 @@ nav ul ul ul li {
   margin-top: -4%;
 }
 
-.title h2 {
-  font-family: 'helvetica' !important;
-  font-weight: bolder;
+.title{
+  font-family: 'Helvetica' !important;
 }

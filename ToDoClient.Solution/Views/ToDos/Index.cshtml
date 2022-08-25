@@ -2,7 +2,7 @@
 @using Microsoft.AspNetCore.Identity
 @inject UserManager<ApplicationUser> userManager
 
-<h2>To-Dos</h2>
+<h2 class="title">ToDos</h2>
 
 <br>
 @{ ApplicationUser user = await userManager.GetUserAsync(@User); }

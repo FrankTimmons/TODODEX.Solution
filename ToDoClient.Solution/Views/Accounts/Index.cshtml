@@ -4,9 +4,9 @@
 
 @if (User.Identity.IsAuthenticated)
 {
-  <p id="logText">Hello @User.Identity.Name</p>
+  <h1  class="title" id="logText">Hello @User.Identity.Name</h1>
   <br>
-  <h4 id="logText">Be sure to keep your password safe, or else Kerl will steal it!</h4>
+  <h4 id="logText" class="title">Be sure to keep your password safe, or else Kerl will steal it!</h4>
   <img id="logImg" src="https://cdn.discordapp.com/attachments/1011292802468032512/1012097391127695441/Keral-smal.png">
   <div style="text-align: center">
     @using (Html.BeginForm("LogOff", "Accounts"))
@@ -16,7 +16,8 @@
   </div>
 }
 else
-{
+{<div align=center>
   <a href='@Url.Action("Register")'><button id="save-button" class="w3-button w3-border w3-hover-indigo">Register</button></a>
   <a href='@Url.Action("Login")'><button id="save-button" class="w3-button w3-border w3-hover-indigo">Log In</button></a>
+</div>
 }
