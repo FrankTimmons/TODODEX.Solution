@@ -3,6 +3,7 @@
 button { 
   padding: 3px;
   border: transparent 3px;
+  border-radius: 10px;
   margin: 3px;  
   background-color: #029ACF;
   color: white;
@@ -48,6 +49,7 @@ button {
 
 .container { 
   box-sizing: border-box;
+  border-radius: 20px;
   align-items: flex-end; 
   position: relative;
   background-color: rgb(255, 255, 255);
@@ -104,7 +106,7 @@ table {
 
 th {
   vertical-align: bottom;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #228b22;
   display: table-cell;
   font-weight: bold;
   text-align: left;
@@ -140,7 +142,7 @@ select {
 table, td, th {
   border-collapse: collapse;
   border-style: hidden;
-  box-shadow: 0 0 0 1px #777;
+  border-radius: 10px;
   background-color: #fff;
   border-spacing: 0 !important;
   padding: 4px !important;
@@ -149,14 +151,14 @@ table, td, th {
 }
 
 .box {
-  border: 5px solid #029ACF;
+  border: 5px solid #228b22;
   border-radius: 25px;
   padding: 2%;
-  background-color: #444;
+  background-color: rgb(126, 191, 96);
 }
 
 .image-box {
-  border: 5px solid #029acf;
+  border: 5px solid #228b22;
   border-radius: 15px;
   width: 218px;
   background-color: #999;
@@ -319,4 +321,8 @@ nav ul ul ul li {
   text-transform: uppercase;
   font-weight: bolder;
   margin-bottom: 1rem;
+}
+
+.add-font h1 h2 {
+  font-family: 'Silkscreen', cursive;
 }

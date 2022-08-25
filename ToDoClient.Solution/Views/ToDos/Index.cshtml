@@ -28,10 +28,10 @@ else
               <th>@todo.Name &emsp;</th>
               <th style="text-align:right">PP: @todo.PP</th>
             </tr>
-            <tr colspan="2">
-              <td colspan="2">Category: @todo.Category</td>
+            <tr>
+              <td>Category: @todo.Category</td><td></td>
             </tr>
-            <tr colspan="2">
+            <tr>
               <td>@todo.Description</td>
               <td align="right">
               @using (Html.BeginForm("Delete", "Accounts", new { id = @todo.ToDoId })){

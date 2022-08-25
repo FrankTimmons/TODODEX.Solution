@@ -2,7 +2,7 @@
  
 #### By _**Frank Timmons, Max Alvord, Zachary Waggoner, Anthony DiFalco, Matt Wilkinson, Grace Kostanich**_  
  
-#### _This is a project containing an API and a website ..._  
+#### _This is a project containing a website that pings a homemade API to get information on a list of ToDos or a users personal roster_  
  
 ---
  
@@ -34,11 +34,11 @@ _This API is using Swagger (an open-source API tool) to describe its structure a
 ```$ dotnet run```
 <li> Open the application in a browser by selecting the provided link in your terminal  
  
-(Ex:|| https://localhost:5000)
+(Ex:|| https://localhost:5002)
  
 <li> Add <strong>"/swagger"</strong> to the end of the URL path to view API structure and all endpoints    
  
-(Ex:|| https://localhost:5000/swagger)
+(Ex:|| https://localhost:5002/swagger)
  
 <br>
 </details>

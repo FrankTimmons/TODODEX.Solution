@@ -20,7 +20,9 @@ namespace ToDoAPI.Controllers
     {
       _db = db;
     }
-
+    /// <summary>
+    /// Grabs a list of ToDos.
+    /// </summary>
     [HttpGet]
     public async Task<ActionResult<IEnumerable<ToDo>>> Get()
     {

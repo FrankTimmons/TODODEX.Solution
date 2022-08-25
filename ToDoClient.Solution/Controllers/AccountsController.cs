@@ -63,8 +63,11 @@ namespace ToDoClient.Solution.Controllers
     [HttpPost]
     public async Task<ActionResult> AddToDo(int id)
     {
+      string [] result = {};
       ApplicationUser user = await _userManager.GetUserAsync(@User);
-      string[] result = user.ToDos.Split(":");
+      if (user.ToDos != ""){
+        result = user.ToDos.Split(":");
+      }
       if (Array.Exists(result, e => e == id.ToString()))
       {
         TempData["ErrorMessage"] = "You've already added this To-Do to your list";
