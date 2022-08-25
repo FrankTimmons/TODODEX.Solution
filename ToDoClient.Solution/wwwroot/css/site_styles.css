@@ -116,7 +116,7 @@ th {
 
 td {
   color: #777;
-  font-family: Helvetica;
+  font-family: 'Helvetica';
 }
 
 thead {
@@ -154,7 +154,7 @@ table, td, th {
   border: 5px solid #228b22;
   border-radius: 25px;
   padding: 2%;
-  background-color: rgb(126, 191, 96);
+  background-color: #7ebf60;
 }
 
 .image-box {
@@ -315,14 +315,65 @@ nav ul ul ul li {
 }
 
 #save-button {
-  color: purple;
-  background-color: ;
+  color: slateblue;
+  background-color: white;
   font-family: 'Silkscreen', cursive;
   text-transform: uppercase;
   font-weight: bolder;
   margin-bottom: 1rem;
 }
 
-.add-font h1 h2 {
+#save-button1 {
+  float: right;
+  margin-left: 65%;
+  margin-top: 10%;
+  display: flex;
+  outline: 5px solid #444;
+  border: 5px solid #444;
+  color: #444;
+  background-color: #7ebf60;
   font-family: 'Silkscreen', cursive;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  font-size: 20px;
+  word-wrap: break-word;
+  width: 30%;
+}
+
+#save-button1:hover {
+  color: #7ebf60 !important;
+  background-color: #444 !important;
+}
+
+.add-font {
+  width: 40%;
+  float: right;
+  margin-right: -10%;
+  margin-top: 160px;
+  display: flex;
+  align-items: center;
+  font-family: 'Silkscreen', cursive;
+  font-weight: bolder;
+}
+
+#logImg{
+  display: block;
+  margin: auto;
+}
+
+#logText{
+  text-align: center;
+}
+#kerl{
+  display: inline;
+  width: 250px;
+  height: auto;
+  float: right;
+  margin-top: -4%;
+}
+
+.title h2 {
+  font-family: 'helvetica' !important;
+  font-weight: bolder;
 }

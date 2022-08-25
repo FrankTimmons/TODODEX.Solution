@@ -20,6 +20,7 @@ namespace ToDoAPI.Controllers
     {
       _db = db;
     }
+
     /// <summary>
     /// Grabs a list of ToDos.
     /// </summary>
@@ -38,6 +39,11 @@ namespace ToDoAPI.Controllers
       return CreatedAtAction(nameof(GetToDo), new { id = toDo.ToDoId }, toDo);
     }
 
+    /// <summary>
+    /// Grabs a specific ToDo by id.
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns>A specific ToDo</returns>
     [HttpGet("{id}")]
     public async Task<ActionResult<ToDo>> GetToDo(int id)
     {
@@ -51,6 +57,28 @@ namespace ToDoAPI.Controllers
       return toDo;
     }
 
+    /// <summary>
+    /// modifies a specific ToDO.
+    /// </summary>
+    /// <param name="toDo"></param>
+    /// <param name="id"></param>
+    /// <returns>A newly updated Todo</returns>
+    /// <remarks>
+    /// Sample request:
+    ///
+    ///     PUT api/ToDo/1
+    ///     {
+    ///        "ToDoId": 1,
+    ///        "Name": "Washoo",
+    ///        "Category": "Time",
+    ///        "PP": 7,
+    ///        "Health": 25
+    ///     }
+    ///
+    /// </remarks>
+    /// <response code="201">Returns the newly updated toDo</response>
+    /// <response code="400">If the ToDo is null</response>
+    // PUT: api/todo/1
     [HttpPut("{id}")]
     public async Task<IActionResult> Put(int id, ToDo toDo)
     {
@@ -80,6 +108,11 @@ namespace ToDoAPI.Controllers
       return NoContent();
     }
 
+    /// <summary>
+    /// Deletes a specific ToDo.
+    /// </summary>
+    /// <param name ="id"></param>
+    // DELETE: api/toDo/5
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteToDo(int id)
     {

@@ -2,11 +2,12 @@
 @model ToDoClient.Solution.Models.ToDo;
 
 @{ var result = ToDo.GetToDos(); }
-<h2>Select a ToDo to see its details</h2>
+<h2 class="title" align=center >Select a ToDo to see its details</h2>
 <br>
 <div id="AddList">
   @foreach(ToDo toDo in result)
   {
-    <p><a href='@Url.Action("Details", new { id = @toDo.ToDoId })' id="ToDoList"><button class="w3-button w3-border w3-hover-light-blue" style="width:90%">@toDo.Name</button></a></p>
+    <p><a href='@Url.Action("Details", new { id = @toDo.ToDoId })' id="ToDoList"><button id="save-button" class="w3-button w3-border w3-hover-indigo" style="width:90%">@toDo.Name</button></a></p>
   }
+<img id="kerl" src="https://cdn.discordapp.com/attachments/1011292802468032512/1012097391127695441/Keral-smal.png">
 </div>

@@ -15674,11 +15674,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/difalcoa/Desktop/TODODEX.Solution/ToDoClient.Solution/Views/Accounts/AddToDos.cshtml",
-      "TargetPath": "Views\\Accounts\\AddToDos.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "/Users/difalcoa/Desktop/TODODEX.Solution/ToDoClient.Solution/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"

@@ -4,15 +4,19 @@
 
 @if (User.Identity.IsAuthenticated)
 {
-  <p>Hello @User.Identity.Name</p>
-  @using (Html.BeginForm("LogOff", "Accounts"))
-  {
-    <button type="submit" class="w3-button w3-border w3-hover-indigo">Log Out</button>
-  }
+  <p id="logText">Hello @User.Identity.Name</p>
+  <br>
+  <h4 id="logText">Be sure to keep your password safe, or else Kerl will steal it!</h4>
+  <img id="logImg" src="https://cdn.discordapp.com/attachments/1011292802468032512/1012097391127695441/Keral-smal.png">
+  <div style="text-align: center">
+    @using (Html.BeginForm("LogOff", "Accounts"))
+    {
+      <button id="save-button" type="submit" class="w3-button w3-border w3-hover-indigo" align=center>Log Out</button>
+    }
+  </div>
 }
 else
 {
-  
-  <a href='@Url.Action("Register")'><button class="w3-button w3-border w3-hover-indigo">Register</button></a>
-  <a href='@Url.Action("Login")'><button class="w3-button w3-border w3-hover-indigo">Log In</button></a>
+  <a href='@Url.Action("Register")'><button id="save-button" class="w3-button w3-border w3-hover-indigo">Register</button></a>
+  <a href='@Url.Action("Login")'><button id="save-button" class="w3-button w3-border w3-hover-indigo">Log In</button></a>
 }

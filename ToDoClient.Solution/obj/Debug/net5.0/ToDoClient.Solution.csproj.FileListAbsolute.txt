@@ -55,7 +55,6 @@
 /Users/difalcoa/Desktop/TODODEX.Solution/ToDoClient.Solution/obj/Debug/net5.0/Razor/Views/Accounts/Index.cshtml.g.cs
 /Users/difalcoa/Desktop/TODODEX.Solution/ToDoClient.Solution/obj/Debug/net5.0/Razor/Views/Accounts/Login.cshtml.g.cs
 /Users/difalcoa/Desktop/TODODEX.Solution/ToDoClient.Solution/obj/Debug/net5.0/Razor/Views/Accounts/Register.cshtml.g.cs
-/Users/difalcoa/Desktop/TODODEX.Solution/ToDoClient.Solution/obj/Debug/net5.0/Razor/Views/Accounts/AddToDos.cshtml.g.cs
 /Users/difalcoa/Desktop/TODODEX.Solution/ToDoClient.Solution/bin/Debug/net5.0/ToDoClient.Solution.StaticWebAssets.xml
 /Users/difalcoa/Desktop/TODODEX.Solution/ToDoClient.Solution/bin/Debug/net5.0/Microsoft.AspNetCore.Identity.UI.Views.V4.dll
 /Users/difalcoa/Desktop/TODODEX.Solution/ToDoClient.Solution/bin/Debug/net5.0/Microsoft.AspNetCore.Identity.UI.dll
