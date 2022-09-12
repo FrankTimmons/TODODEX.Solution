@@ -15,7 +15,8 @@ _This is a project containing a website that pings a homemade API to retrieve da
 * _Swagger_
  
 ## Setup and Installation Requirements
-**This Setup assumes you have GitBash and MySQL Workbench pre-installed.  
+**⚠️ This Setup assumes you have GitBash and MySQL Workbench pre-installed ⚠️**
+
 If needed, please navigate to these links:  
 https://git-scm.com/download/  
 Download Git and follow the setup wizard.  
