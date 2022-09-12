@@ -1,6 +1,6 @@
 # TODODEX
  
-#### By _**Frank Timmons, Max Alvord, Zachary Waggoner, Anthony DiℲalco, Matt Wilkinson, Grace Kostanich**_  
+#### By _**Frank Timmons, Max Alvord, Zachary Waggoner, Anthony Difalco, Matt Wilkinson, Grace Kostanich**_  
  
 #### _This is a project containing a website that pings a homemade API to get information on a list of ToDos or a users personal roster_  
  
@@ -239,4 +239,4 @@ This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be comp
  
 [MIT](https://opensource.org/osd)
 
-Copyright (c) 8/22/2022 Frank Timmons, Max Alvord, Zachary Waggoner, Anthony DiℲalco, Matt Wilkinson, Grace Kostanich
+Copyright (c) 8/22/2022 Frank Timmons, Max Alvord, Zachary Waggoner, Anthony Difalco, Matt Wilkinson, Grace Kostanich
