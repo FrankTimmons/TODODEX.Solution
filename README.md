@@ -1,8 +1,8 @@
 # TODODEX
  
-#### By _**Frank Timmons, Max Alvord, Zachary Waggoner, Anthony DiℲalco, Matt Wilkinson, Grace Kostanich**_  
+#### By _**Frank Timmons, Max Alvord, Zachary Waggoner, Anthony Difalco, Matt Wilkinson, Grace Kostanich**_  
  
-#### _This is a project containing a website that pings a homemade API to get information on a list of ToDos or a users personal roster_  
+_This is a project containing a website that pings a homemade API to retrieve data from a ToDo character_  
  
 ---
  
@@ -15,7 +15,8 @@
 * _Swagger_
  
 ## Setup and Installation Requirements
-**This Setup assumes you have GitBash and MySQL Workbench pre-installed.  
+**⚠️ This Setup assumes you have GitBash and MySQL Workbench pre-installed ⚠️**
+
 If needed, please navigate to these links:  
 https://git-scm.com/download/  
 Download Git and follow the setup wizard.  
@@ -23,7 +24,7 @@ https://dev.mysql.com/downloads/workbench/
 Download MySQL Workbench, follow the setup wizard & create a localhost server on port 3306**
  
  
-*Note: Keep track of your username and password, this will be used in the connection link under,*  
+**Note**: _Keep track of your username and password, this will be used in the connection link under,_  
 "**SQL Workbench Configuration**" > "2. Insert the following code:"
 
 
@@ -32,11 +33,9 @@ Download MySQL Workbench, follow the setup wizard & create a localhost server on
 
 ## Description
  
-This is a website built on ASP.NET Core with the MVC structure. It's using a custom API that was also developed in C# with MVC, and deployed to Azure (As of writing, the API is no longer hosted on Azure, please follow the instructions to set it up locally on your machine).  We had to create a To Do List type app many times during our course at Epicodus, and we wanted to make a website that parodied it in some way.  We grouped together to make fun custom artwork for creatures we called 'ToDos', and put them into an API.  We then created this clientside web app that allowed you to build a team of up to 5 of your favorite ToDos.  If you'd like to just run the API and call to it in your own site, skip to ToDoApi.Solution's initial setup.  
-
+This is a website built on ASP.NET Core with the MVC structure. It's using a custom API that was also developed in C# with MVC, and deployed to Azure (As of writing, the API is no longer hosted on Azure, please follow the instructions to set it up locally on your machine). We had to create a To Do List type app many times during our course at Epicodus, and we wanted to make a website that parodied it in some way. We grouped together to make fun custom artwork for creatures we called 'ToDos', and put them into an API. We then created this clientside web app that allowed you to build a team of up to 5 of your favorite ToDos. If you'd like to just run the API and call to it in your own site, skip to ToDoApi.Solution's initial setup. 
 _Written in C#_
  
----
  
  
 <details>
@@ -102,91 +101,19 @@ Navigate to:
  
 Run ```$ dotnet restore``` in the terminal.<br>
 Run ```$ dotnet run``` in the terminal.
-<strong>⚠️ Previously, the API side of this project was hosted on Azure, but has since been taken down due to financial reasons.  Follow the setup for the API project below and run it simultaneously with the client side.⚠️</strong> 
 </details>
-<br>
- 
-This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be compatible with other versions. Your milage may vary.
 
 ---
 
 # ToDoAPI.Solution Setup
 
-<strong>⚠️ Previously, the API side of this project was hosted on Azure, but has since been taken down due to financial reasons.  Please disregard the message below, and follow the steps to setup the API locally on your own computer if you wish to run the project.⚠️</strong>  
-
-<strong>~~⚠️Locally creating your API is not required to run the client side of the application. Only follow the steps below if you wish to have the API hosted locally on your computer. If you decide not to host the API on your computer, use the endpoints listed below.⚠️~~</strong>  
-
-## Azure Endpoints
- 
-Base URL: https://tododexapi.azurewebsites.net/
- 
-#### HTTP Requests
- 
-```
-GET api/todos
-POST api/todos
-DELETE api/todos/{id}
-PUT api/todos/{id}
-GET api/todos/{id}
-```
- 
-#### Past Example Query with Azure
- 
-```
-https://tododexapi.azurewebsites.net/api/todos/1
-```
- 
----
-
 ## Description
  
-This is an API built on ASP.NET Core MVC that's populated with seed data of the ToDos that we created.     
+This is an API built on ASP.NET Core MVC that's populated with seed data of TODO characters   
 _Written in C#_
  
----
-## API Documentation
-_This API is using Swagger (an open-source API tool) to describe its structure and display all available endpoints_
  
-<details>
-<summary><strong>View in Browser</strong></summary>
-<ol>
-<li> Follow the project <strong>Setup and Installation Requirements</strong> below & run the application in a terminal inside the projects root directory with  
  
-```$ dotnet run```
-<li> Open the application in a browser by selecting the provided link in your terminal  
- 
-(Ex:|| https://localhost:5002)
- 
-<li> Add <strong>"/swagger"</strong> to the end of the URL path to view API structure and all endpoints    
- 
-(Ex:|| https://localhost:5002/swagger)
- 
-<br>
-</details>
- 
----
-## Endpoints
- 
-Base URL: https://localhost:5002
- 
-#### HTTP Request
- 
-```
-GET api/todos
-POST api/todos
-DELETE api/todos/{id}
-PUT api/todos/{id}
-GET api/todos/{id}
-```
- 
-#### Example Query
- 
-```
-https://localhost:5002/api/todos/1
-```
- 
----
-
 <details>
 <summary><strong>Initial Setup</strong></summary>
 <ol>
@@ -252,7 +179,50 @@ Navigate to:
 Run ```$ dotnet restore``` in the terminal.<br>
 Run ```$ dotnet run``` in the terminal.
 </details>
+ 
+---
+## API Documentation
+_This API is using Swagger (an open-source API tool) to describe its structure and display all available endpoints_
+ 
+<details>
+<summary><strong>View in Browser</strong></summary>
+<ol>
+<li> Follow the project <strong>Setup and Installation Requirements</strong> above then run the application in a terminal inside the projects root directory with  
+ 
+```$ dotnet run```
+<li> Open the application in a browser by selecting the provided link in your terminal  
+ 
+(Ex:|| https://localhost:5002)
+ 
+<li> Add <strong>"/swagger"</strong> to the end of the URL path to view API structure and all endpoints    
+ 
+(Ex:|| https://localhost:5002/swagger)
+ 
 <br>
+</details>
+ 
+---
+## Endpoints
+ 
+Base URL: https://localhost:5002
+ 
+#### HTTP Request
+ 
+```
+GET api/todos
+POST api/todos
+DELETE api/todos/{id}
+PUT api/todos/{id}
+GET api/todos/{id}
+```
+ 
+#### Example Query
+ 
+```
+https://localhost:5002/api/todos/1
+```
+ 
+---
  
 This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be compatible with other versions. Your milage may vary.
  
@@ -267,4 +237,4 @@ This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be comp
  
 [MIT](https://opensource.org/osd)
 
-Copyright (c) 8/22/2022 Frank Timmons, Max Alvord, Zachary Waggoner, Anthony DiℲalco, Matt Wilkinson, Grace Kostanich
+Copyright (c) 8/22/2022 Frank Timmons, Max Alvord, Zachary Waggoner, Anthony Difalco, Matt Wilkinson, Grace Kostanich
