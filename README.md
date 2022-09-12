@@ -33,7 +33,7 @@ Download MySQL Workbench, follow the setup wizard & create a localhost server on
 
 ## Description
  
-This is a website built on ASP.NET Core with the MVC structure. It's using a custom API that was also developed in C# with MVC, and deployed to Azure (As of writing, the API is no longer hosted on Azure, please follow the instructions to set it up locally on your machine). We had to create a To Do List type app many times during our course at Epicodus, and we wanted to make a website that parodied it in some way. We grouped together to make fun custom artwork for creatures we called 'ToDos', and put them into an API. We then created this clientside web app that allowed you to build a team of up to 5 of your favorite ToDos. If you'd like to just run the API and call to it in your own site, skip to ToDoApi.Solution's initial setup. 
+This is a website built on ASP.NET Core with the MVC structure. It's using a custom API that was also developed in C# with MVC, and deployed to Azure (As of writing, the API is no longer hosted on Azure, please follow the instructions to set it up locally on your machine). We had to create a To Do List type app many times during our course at Epicodus, and we wanted to make a website that parodied it in some way. We grouped together to make fun custom artwork for creatures we called 'ToDos', and put them into an API. We then created this clientside web app that allowed you to build a team of up to 5 of your favorite ToDos. If you'd like to just run the API and call to it in your own site, skip to ToDoApi.Solution's initial setup.  
 _Written in C#_
  
  
@@ -109,7 +109,7 @@ Run ```$ dotnet run``` in the terminal.
 
 ## Description
  
-This is an API built on ASP.NET Core MVC that's populated with seed data of TODO characters   
+This is an API built on ASP.NET Core MVC that's populated with seed data of our ToDo characters.    
 _Written in C#_
  
  
