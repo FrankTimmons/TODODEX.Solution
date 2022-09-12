@@ -115,28 +115,7 @@ This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be comp
 This is an API built on ASP.NET Core MVC that's populated with seed data of TODO characters   
 _Written in C#_
  
----
-## API Documentation
-_This API is using Swagger (an open-source API tool) to describe its structure and display all available endpoints_
- 
-<details>
-<summary><strong>View in Browser</strong></summary>
-<ol>
-<li> Follow the project <strong>Setup and Installation Requirements</strong> below & run the application in a terminal inside the projects root directory with  
- 
-```$ dotnet run```
-<li> Open the application in a browser by selecting the provided link in your terminal  
- 
-(Ex:|| https://localhost:5002)
- 
-<li> Add <strong>"/swagger"</strong> to the end of the URL path to view API structure and all endpoints    
- 
-(Ex:|| https://localhost:5002/swagger)
- 
-<br>
-</details>
- 
----
+ ---
  
  
 <details>
@@ -203,6 +182,29 @@ Navigate to:
  
 Run ```$ dotnet restore``` in the terminal.<br>
 Run ```$ dotnet run``` in the terminal.
+</details>
+ 
+---
+ 
+---
+## API Documentation
+_This API is using Swagger (an open-source API tool) to describe its structure and display all available endpoints_
+ 
+<details>
+<summary><strong>View in Browser</strong></summary>
+<ol>
+<li> Follow the project <strong>Setup and Installation Requirements</strong> below & run the application in a terminal inside the projects root directory with  
+ 
+```$ dotnet run```
+<li> Open the application in a browser by selecting the provided link in your terminal  
+ 
+(Ex:|| https://localhost:5002)
+ 
+<li> Add <strong>"/swagger"</strong> to the end of the URL path to view API structure and all endpoints    
+ 
+(Ex:|| https://localhost:5002/swagger)
+ 
+<br>
 </details>
  
 ---
