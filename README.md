@@ -110,31 +110,6 @@ This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be comp
 
 # ToDoAPI.Solution Setup
 
-
-<strong>⚠️Locally creating your API is not required to run the client side of the application. Only follow the steps below if you wish to have the API hosted locally on your computer. If you decide not to host the API on your computer, use the endpoints listed below.⚠️</strong>
-
-## Endpoints
- 
-Base URL: https://tododexapi.azurewebsites.net/
- 
-#### HTTP Request
- 
-```
-GET api/todos
-POST api/todos
-DELETE api/todos/{id}
-PUT api/todos/{id}
-GET api/todos/{id}
-```
- 
-#### Example Query
- 
-```
-https://tododexapi.azurewebsites.net/api/todos/1
-```
- 
----
-
 ## Description
  
 This is an API built on ASP.NET Core MVC that's populated with seed data of TODO characters   
