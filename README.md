@@ -24,7 +24,7 @@ https://dev.mysql.com/downloads/workbench/
 Download MySQL Workbench, follow the setup wizard & create a localhost server on port 3306**
  
  
-*Note: Keep track of your username and password, this will be used in the connection link under,*  
+**Note**: _Keep track of your username and password, this will be used in the connection link under,_  
 "**SQL Workbench Configuration**" > "2. Insert the following code:"
 
 
