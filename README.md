@@ -231,7 +231,6 @@ This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be comp
 ## Known Bugs
  
 * _While hosting a live share session, the max user connections may exceed the limit of 10 even if the amount of connections is less than that. This is possibly due to using the API database in conjuction with the client._
-* _When using server with Azure, Swagger cannot be found (you'll recieve error 404)_
  
 ## License
  
