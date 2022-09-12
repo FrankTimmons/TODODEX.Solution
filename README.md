@@ -2,7 +2,7 @@
  
 #### By _**Frank Timmons, Max Alvord, Zachary Waggoner, Anthony Difalco, Matt Wilkinson, Grace Kostanich**_  
  
-_This is a project containing a website that pings a homemade API to get information on a list of ToDos or a users personal roster_  
+_This is a project containing a website that pings a homemade API to retrieve data from a ToDo character_  
  
 ---
  
