@@ -102,7 +102,6 @@ Navigate to:
  
 Run ```$ dotnet restore``` in the terminal.<br>
 Run ```$ dotnet run``` in the terminal.
-<strong>⚠️ Previously, the API side of this project was hosted on Azure, but has since been taken down due to financial reasons.  Follow the setup for the API project below and run it simultaneously with the client side.⚠️</strong> 
 </details>
 <br>
  
