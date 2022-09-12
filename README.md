@@ -102,9 +102,6 @@ Navigate to:
 Run ```$ dotnet restore``` in the terminal.<br>
 Run ```$ dotnet run``` in the terminal.
 </details>
-<br>
- 
-This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be compatible with other versions. Your milage may vary.
 
 ---
 
@@ -227,7 +224,6 @@ https://localhost:5002/api/todos/1
 ```
  
 ---
-
  
 This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be compatible with other versions. Your milage may vary.
  
