@@ -32,8 +32,7 @@ Download MySQL Workbench, follow the setup wizard & create a localhost server on
 
 ## Description
  
-This is a website built on ASP.NET Core with the MVC structure. It's using a custom API that was also developed in C# with MVC, and deployed to Azure (As of writing, the API is no longer hosted on Azure, please follow the instructions to set it up locally on your machine).  We had to create a To Do List type app many times during our course at Epicodus, and we wanted to make a website that parodied it in some way.  We grouped together to make fun custom artwork for creatures we called 'ToDos', and put them into an API.  We then created this clientside web app that allowed you to build a team of up to 5 of your favorite ToDos.  If you'd like to just run the API and call to it in your own site, skip to ToDoApi.Solution's initial setup.  
-
+This is a website built on ASP.NET Core MVC that's using a custom built API   
 _Written in C#_
  
 ---
@@ -111,15 +110,14 @@ This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be comp
 
 # ToDoAPI.Solution Setup
 
-<strong>⚠️ Previously, the API side of this project was hosted on Azure, but has since been taken down due to financial reasons.  Please disregard the message below, and follow the steps to setup the API locally on your own computer if you wish to run the project.⚠️</strong>  
 
-<strong>~~⚠️Locally creating your API is not required to run the client side of the application. Only follow the steps below if you wish to have the API hosted locally on your computer. If you decide not to host the API on your computer, use the endpoints listed below.⚠️~~</strong>  
+<strong>⚠️Locally creating your API is not required to run the client side of the application. Only follow the steps below if you wish to have the API hosted locally on your computer. If you decide not to host the API on your computer, use the endpoints listed below.⚠️</strong>
 
-## Azure Endpoints
+## Endpoints
  
 Base URL: https://tododexapi.azurewebsites.net/
  
-#### HTTP Requests
+#### HTTP Request
  
 ```
 GET api/todos
@@ -129,7 +127,7 @@ PUT api/todos/{id}
 GET api/todos/{id}
 ```
  
-#### Past Example Query with Azure
+#### Example Query
  
 ```
 https://tododexapi.azurewebsites.net/api/todos/1
@@ -139,7 +137,7 @@ https://tododexapi.azurewebsites.net/api/todos/1
 
 ## Description
  
-This is an API built on ASP.NET Core MVC that's populated with seed data of the ToDos that we created.     
+This is an API built on ASP.NET Core MVC that's populated with seed data of TODO characters   
 _Written in C#_
  
 ---
