@@ -185,15 +185,13 @@ Run ```$ dotnet run``` in the terminal.
 </details>
  
 ---
- 
----
 ## API Documentation
 _This API is using Swagger (an open-source API tool) to describe its structure and display all available endpoints_
  
 <details>
 <summary><strong>View in Browser</strong></summary>
 <ol>
-<li> Follow the project <strong>Setup and Installation Requirements</strong> below & run the application in a terminal inside the projects root directory with  
+<li> Follow the project <strong>Setup and Installation Requirements</strong> above then run the application in a terminal inside the projects root directory with  
  
 ```$ dotnet run```
 <li> Open the application in a browser by selecting the provided link in your terminal  
@@ -230,7 +228,6 @@ https://localhost:5002/api/todos/1
  
 ---
 
-<br>
  
 This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be compatible with other versions. Your milage may vary.
  
