@@ -137,28 +137,8 @@ _This API is using Swagger (an open-source API tool) to describe its structure a
 </details>
  
 ---
-## Endpoints
  
-Base URL: https://localhost:5002
  
-#### HTTP Request
- 
-```
-GET api/todos
-POST api/todos
-DELETE api/todos/{id}
-PUT api/todos/{id}
-GET api/todos/{id}
-```
- 
-#### Example Query
- 
-```
-https://localhost:5002/api/todos/1
-```
- 
----
-
 <details>
 <summary><strong>Initial Setup</strong></summary>
 <ol>
@@ -224,6 +204,30 @@ Navigate to:
 Run ```$ dotnet restore``` in the terminal.<br>
 Run ```$ dotnet run``` in the terminal.
 </details>
+ 
+---
+## Endpoints
+ 
+Base URL: https://localhost:5002
+ 
+#### HTTP Request
+ 
+```
+GET api/todos
+POST api/todos
+DELETE api/todos/{id}
+PUT api/todos/{id}
+GET api/todos/{id}
+```
+ 
+#### Example Query
+ 
+```
+https://localhost:5002/api/todos/1
+```
+ 
+---
+
 <br>
  
 This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be compatible with other versions. Your milage may vary.
